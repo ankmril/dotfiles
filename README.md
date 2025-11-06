@@ -1,1 +1,1 @@
-# my dotfiles / configs which i've setup for my macbook air m4
+my dotfiles / configs which i've setup for my macbook air m4.
