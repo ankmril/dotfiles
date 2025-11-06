@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)",
+    "height": 20
+  },
+
+  "display": {
+    "separator": "   /   "
+    /* "lowercase": true */
+  },
+
+  "modules": [
+    { "type": "custom", "format": "" },
+    "break",
+
+    {
+      "type": "custom",
+      "format": "                            \u001b[90m●  \u001b[31m●  \u001b[32m●  \u001b[33m●  \u001b[34m●  \u001b[35m●  \u001b[36m●  \u001b[37m● "
+    },
+    "break",
+
+    { "type": "custom", "format": "  #     ┌─────────────────── disappear in despair. ───────────────────┐ " },
+    { "type": "custom", "format": "" },
+    "break",
+
+    { "type": "title", "key": "  \u001b[38;5;171m-" },   // Title
+    { "type": "os", "key": "  \u001b[38;5;177m-" },      // OS info
+    { "type": "terminal", "key": "  \u001b[38;5;147m-" }, // Terminal
+    { "type": "media", "key": "  \u001b[38;5;111m-" },   // Media info
+
+    {
+      "type": "command",
+      "key": "  \u001b[38;5;117m-",
+      "text": "birth_install=$(stat -f %B /var/db/.AppleSetupDone); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo \"$days_difference days\""
+    },
+
+    { "type": "uptime", "key": "  \u001b[38;5;111m-" },  // System uptime
+
+    {
+      "type": "battery",
+      "key": "  \u001b[38;5;117m-",
+      "show_status": false,
+      "show_remaining": false,
+      "show_icon": false
+    },
+
+    { "type": "cpu", "format": "{1}", "key": "  \u001b[38;5;111m-" },   // CPU info
+    { "type": "memory", "key": "  \u001b[38;5;117m-" },                 // Memory usage
+
+    { "type": "custom", "format": "" },
+    "break",
+
+    { "type": "custom", "format": "  #     └──────────────────── 絶望の中で消え去る。────────────────────┘ " },
+    { "type": "custom", "format": "" },
+
+    {
+      "type": "custom",
+      "format": "                            \u001b[90m●  \u001b[31m●  \u001b[32m●  \u001b[33m●  \u001b[34m●  \u001b[35m●  \u001b[36m●  \u001b[37m● "
+    },
+    "break"
+  ]
+}

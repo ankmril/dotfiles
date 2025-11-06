@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# // jankyborders config //
+
+options=(
+  style=round                  # set border style (solid, round, dashed)
+  width=5.25                   # set border width
+  active_color=0xffffffff      # for the white border for active windows
+  inactive_color=0xff5a6d8a    # for the grayish-blue for inactive windows
+  hidpi=on                     # for hidpi support
+)
+
+# // run jankyborders with options //
+
+borders "${options[@]}"
